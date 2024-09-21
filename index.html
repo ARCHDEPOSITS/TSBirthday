@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Card</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f5f7fa;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .card {
+            background: linear-gradient(145deg, #e0f7fa, #b2ebf2);
+            width: 400px;
+            height: 300px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 2em;
+            color: #004d40;
+        }
+
+        .message {
+            font-size: 1.2em;
+            color: #00796b;
+            margin: 0;
+        }
+
+        .from {
+            font-size: 1em;
+            color: #00796b;
+            margin-top: 10px;
+        }
+
+        .balloons {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            animation: rise 5s infinite ease-in-out;
+        }
+
+        @keyframes rise {
+            0% { transform: translateY(100%); }
+            100% { transform: translateY(-150%); }
+        }
+
+        .balloon {
+            width: 50px;
+            height: 80px;
+            background-color: #ff4081;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .balloon:nth-child(2) {
+            background-color: #7c4dff;
+            left: 80px;
+            animation-delay: 0.5s;
+        }
+
+        .balloon:nth-child(3) {
+            background-color: #40c4ff;
+            left: 160px;
+            animation-delay: 1s;
+        }
+
+        .balloon:nth-child(4) {
+            background-color: #00e676;
+            left: 240px;
+            animation-delay: 1.5s;
+        }
+
+        .balloon:nth-child(5) {
+            background-color: #ffea00;
+            left: 320px;
+            animation-delay: 2s;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="balloons">
+            <div class="balloon"></div>
+            <div class="balloon"></div>
+            <div class="balloon"></div>
+            <div class="balloon"></div>
+            <div class="balloon"></div>
+        </div>
+        <div class="content">
+            <h1>Happy Birthday TechSide!</h1>
+            <p class="message">Wishing you a fantastic day!</p>
+            <p class="from">- From Monke</p>
+        </div>
+    </div>
+</body>
+</html>
